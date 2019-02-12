@@ -32,7 +32,8 @@ import StringIO
 
 from flask import Flask, jsonify, request, Response
 from flasgger import Swagger
-
+import sys
+sys.setdefaultencoding('utf8')
 app = Flask(__name__)
 app.config['SWAGGER'] = {
     "swagger_version": "2.0",
