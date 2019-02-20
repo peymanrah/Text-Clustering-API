@@ -308,7 +308,7 @@ def index():
     unstructure = ''
     if 'col' in request.args:
         unstructure = request.args.get('col')
-        print(unstructure)
+        #print(unstructure)
     no_of_clusters = 10
     if 'no_of_clusters' in request.args:
         no_of_clusters = int(request.args.get('no_of_clusters'))
@@ -344,7 +344,7 @@ def index():
         clusters.append(data_clust)
         #print data_cluster.head(n=10)['keywords']
     #data_CLUSTERS.to_csv('output_full.csv',index=False)
-    pd.DataFrame(clusters).to_csv('keywords_.csv')
+    #pd.DataFrame(clusters).to_csv('keywords_.csv')
     data.to_csv('Q2.csv',index=False)
     
     resp = Response(output.getvalue(), mimetype="text/csv")
